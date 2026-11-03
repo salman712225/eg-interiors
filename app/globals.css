@@ -1,26 +1,107 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    background-color: #FEF0E5;
+    color: #392F29;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant), Georgia, serif;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #8B6E5C;
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes eg-hero-zoom {
+  from { transform: scale(1.07); }
+  to   { transform: scale(1); }
+}
+
+@keyframes eg-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .eg-hero-zoom {
+    animation: eg-hero-zoom 8s ease-out forwards;
+  }
+  .eg-fade-up {
+    opacity: 0;
+    animation: eg-fade-up 0.7s ease-out forwards;
+  }
+  .eg-delay-1 { animation-delay: 0.2s; }
+  .eg-delay-2 { animation-delay: 0.4s; }
+  .eg-delay-3 { animation-delay: 0.6s; }
+  .eg-delay-4 { animation-delay: 0.75s; }
+  .eg-delay-5 { animation-delay: 0.9s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eg-fade-up { opacity: 1; animation: none; }
+  .eg-hero-zoom { animation: none; }
+}
+
+@layer utilities {
+  .heading-display {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .heading-xl {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.75rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .heading-lg {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .heading-md {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: clamp(1.25rem, 2vw, 1.875rem);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  .body-lg {
+    font-family: var(--font-manrope), system-ui, sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+  .body-md {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    line-height: 1.7;
+  }
+  .label-sm {
+    font-family: var(--font-manrope), system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .font-cormorant { font-family: var(--font-cormorant), Georgia, serif; }
+  .font-playfair  { font-family: var(--font-playfair), Georgia, serif; }
+  .font-inter     { font-family: var(--font-inter), system-ui, sans-serif; }
+  .font-manrope   { font-family: var(--font-manrope), system-ui, sans-serif; }
 }
