@@ -13,15 +13,15 @@ export default function ProcessPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-[#392F29]">
+      <section className="pt-36 pb-20 bg-[#590907]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="label-sm text-[#CFAB93] mb-6">How We Work</p>
-            <h1 className="heading-display text-[#FEF0E5] mb-6">
+            <p className="label-sm text-[#E8D2B5] mb-6 tracking-widest">How We Work</p>
+            <h1 className="heading-display text-[#FAF6F0] mb-6">
               Our Design{" "}
-              <em className="italic text-[#CFAB93]">Process.</em>
+              <em className="italic text-[#E8D2B5]">Process.</em>
             </h1>
-            <p className="body-lg text-[#FEF0E5]/60 max-w-xl">
+            <p className="body-lg text-[#FAF6F0]/80 max-w-xl">
               A transparent, collaborative journey from your first conversation to the moment we hand over your finished space.
             </p>
           </div>
@@ -34,4 +34,3 @@ export default function ProcessPage() {
     </>
   );
 }
-

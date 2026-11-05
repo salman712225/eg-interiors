@@ -35,8 +35,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#FEF0E5]/98 backdrop-blur-md shadow-md py-2 border-b border-[#E8D9CC]/80"
-            : "bg-[#FEF0E5]/95 backdrop-blur-md shadow-xs py-3 border-b border-[#E8D9CC]/50"
+            ? "bg-[#FAF6F0]/98 backdrop-blur-md shadow-md py-2 border-b border-[#E8D2B5]"
+            : "bg-[#FAF6F0]/95 backdrop-blur-md shadow-xs py-3 border-b border-[#E8D2B5]/60"
         }`}
         role="banner"
       >
@@ -63,10 +63,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-manrope text-sm font-semibold text-[#392F29] hover:text-[#8B6E5C] transition-colors duration-200 relative group py-1 tracking-wide"
+                className="font-manrope text-sm font-semibold text-[#2A1616] hover:text-[#590907] transition-colors duration-200 relative group py-1 tracking-wide"
               >
                 {link.label}
-                <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-[#8B6E5C] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-[#590907] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </nav>
@@ -75,16 +75,16 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-5">
             <a
               href={`tel:+91${siteConfig.contact.phone1}`}
-              className="flex items-center gap-2 text-xs font-manrope font-semibold text-[#8B6E5C] hover:text-[#392F29] transition-colors"
+              className="flex items-center gap-2 text-xs font-manrope font-semibold text-[#590907] hover:text-[#2A1616] transition-colors"
             >
-              <Phone size={14} />
+              <Phone size={14} className="text-[#590907]" />
               <span>{siteConfig.contact.phone1Display}</span>
             </a>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-[#392F29] text-[#FEF0E5] font-manrope text-sm font-semibold hover:bg-[#8B6E5C] transition-colors duration-300 shadow-sm"
+              className="flex items-center gap-2 px-6 py-3 bg-[#590907] text-[#FAF6F0] font-manrope text-sm font-semibold hover:bg-[#2A1616] transition-colors duration-300 shadow-sm"
             >
               Get a Quote
             </a>
@@ -92,7 +92,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 text-[#392F29] hover:text-[#8B6E5C] transition-colors"
+            className="lg:hidden p-2 text-[#2A1616] hover:text-[#590907] transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
@@ -104,12 +104,12 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-[#FEF0E5] flex flex-col transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed inset-0 z-50 bg-[#FAF6F0] flex flex-col transition-transform duration-300 ease-in-out lg:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!menuOpen}
       >
-        <div className="flex items-center justify-between px-6 py-4 border-b border-[#E8D9CC]">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-[#E8D2B5]">
           <Image
             src="/logo/Logo-removebg-preview.png"
             alt="E.G. Interiors"
@@ -120,7 +120,7 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
-            className="p-2 text-[#392F29]"
+            className="p-2 text-[#2A1616]"
           >
             <X size={28} />
           </button>
@@ -132,27 +132,27 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-cormorant text-2xl font-normal text-[#392F29] hover:text-[#8B6E5C] transition-colors py-3.5 border-b border-[#E8D9CC]/60 flex items-center justify-between"
+              className="font-cormorant text-2xl font-normal text-[#2A1616] hover:text-[#590907] transition-colors py-3.5 border-b border-[#E8D2B5]/60 flex items-center justify-between"
             >
               <span>{link.label}</span>
-              <span className="text-xs font-manrope text-[#8B6E5C]">→</span>
+              <span className="text-xs font-manrope text-[#A5A79B]">→</span>
             </Link>
           ))}
         </nav>
 
-        <div className="px-6 py-6 border-t border-[#E8D9CC] flex flex-col gap-3 bg-[#F7F3EE]">
+        <div className="px-6 py-6 border-t border-[#E8D2B5] flex flex-col gap-3 bg-[#E8D2B5]/25">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full text-center py-3.5 bg-[#392F29] text-[#FEF0E5] font-manrope font-semibold text-sm hover:bg-[#8B6E5C] transition-colors"
+            className="w-full text-center py-3.5 bg-[#590907] text-[#FAF6F0] font-manrope font-semibold text-sm hover:bg-[#2A1616] transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Get a Quote via WhatsApp
           </a>
           <a
             href={`tel:+91${siteConfig.contact.phone1}`}
-            className="w-full flex items-center justify-center gap-2 py-3 border border-[#8B6E5C] text-[#8B6E5C] font-manrope font-semibold text-sm hover:bg-[#8B6E5C] hover:text-[#FEF0E5] transition-colors"
+            className="w-full flex items-center justify-center gap-2 py-3 border border-[#590907] text-[#590907] font-manrope font-semibold text-sm hover:bg-[#590907] hover:text-[#FAF6F0] transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             <Phone size={15} />

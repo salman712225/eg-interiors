@@ -16,15 +16,15 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-[#392F29] overflow-hidden" aria-label="About page hero">
+      <section className="relative pt-36 pb-20 bg-[#590907] overflow-hidden" aria-label="About page hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="label-sm text-[#CFAB93] mb-6">Our Story</p>
-            <h1 className="heading-display text-[#FEF0E5] mb-6">
+            <p className="label-sm text-[#E8D2B5] mb-6 tracking-widest">Our Story</p>
+            <h1 className="heading-display text-[#FAF6F0] mb-6">
               Crafting Spaces{" "}
-              <em className="italic text-[#CFAB93]">That Inspire.</em>
+              <em className="italic text-[#E8D2B5]">That Inspire.</em>
             </h1>
-            <p className="body-lg text-[#FEF0E5]/60 max-w-xl">
+            <p className="body-lg text-[#FAF6F0]/80 max-w-xl">
               E.G. Interiors is a Chennai-based interior design studio committed to creating personalized, beautiful, and functional living and working spaces.
             </p>
           </div>
@@ -32,12 +32,12 @@ export default function AboutPage() {
       </section>
 
       {/* Main about content */}
-      <section className="bg-[#FEF0E5] py-20 lg:py-32">
+      <section className="bg-[#FAF6F0] py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             {/* Left: image stack */}
             <div className="relative">
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden shadow-lg">
                 <Image
                   src="/images/projects/project-4.jpg"
                   alt="E.G. Interiors design studio work"
@@ -46,7 +46,7 @@ export default function AboutPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute -bottom-8 -right-4 lg:-right-8 w-1/2 aspect-square overflow-hidden border-4 border-[#FEF0E5]">
+              <div className="absolute -bottom-8 -right-4 lg:-right-8 w-1/2 aspect-square overflow-hidden border-4 border-[#FAF6F0] shadow-xl">
                 <Image
                   src="/images/projects/project-5.jpg"
                   alt="Interior design detail"
@@ -59,21 +59,21 @@ export default function AboutPage() {
 
             {/* Right: text */}
             <div className="pt-8 lg:pt-4">
-              <p className="label-sm text-[#8B6E5C] mb-4">About E.G. Interiors</p>
-              <h2 className="heading-xl text-[#392F29] mb-8">
+              <p className="label-sm text-[#590907] mb-4 tracking-widest">About E.G. Interiors</p>
+              <h2 className="heading-xl text-[#2A1616] mb-8">
                 Where Your Vision{" "}
-                <em className="italic text-[#8B6E5C]">Meets</em>{" "}
+                <em className="italic text-[#590907]">Meets</em>{" "}
                 Our Creativity.
               </h2>
-              <p className="body-lg text-[#8A817A] mb-6 leading-relaxed">
+              <p className="body-lg text-[#6B665E] mb-6 leading-relaxed">
                 At E.G Interiors, we transform ideas into thoughtfully designed spaces that reflect your lifestyle, needs, and personality. From concept and 3D visualization to complete interior execution, we focus on quality, detail, and client satisfaction at every stage.
               </p>
-              <p className="body-md text-[#8A817A] mb-8">
+              <p className="body-md text-[#6B665E] mb-8">
                 We believe that great interior design is about more than aesthetics — it is about understanding how you live, how you work, and what makes a space truly feel like yours. Every project we undertake is a deeply personal collaboration between our team and our clients.
               </p>
 
-              <h3 className="font-cormorant text-2xl text-[#392F29] font-semibold mb-5">Our Design Philosophy</h3>
-              <p className="body-md text-[#8A817A] mb-8">
+              <h3 className="font-cormorant text-2xl text-[#2A1616] font-semibold mb-5">Our Design Philosophy</h3>
+              <p className="body-md text-[#6B665E] mb-8">
                 We believe in thoughtful design that is rooted in understanding — understanding your lifestyle, your daily routines, the way you entertain, the way you rest, and the way you work. Every element, from the spatial layout to the final light fitting, is selected with purpose and precision.
               </p>
 
@@ -82,9 +82,9 @@ export default function AboutPage() {
                   { title: "Mission", text: "To create interiors that genuinely improve the quality of life for every client we work with." },
                   { title: "Vision", text: "To be Chennai's most trusted and creative interior design studio — known for quality, integrity, and design excellence." },
                 ].map((item) => (
-                  <div key={item.title} className="bg-[#F7F3EE] p-6">
-                    <h4 className="font-cormorant text-xl text-[#8B6E5C] font-semibold mb-3">{item.title}</h4>
-                    <p className="font-inter text-sm text-[#8A817A] leading-relaxed">{item.text}</p>
+                  <div key={item.title} className="bg-[#E8D2B5]/25 border border-[#E8D2B5] p-6">
+                    <h4 className="font-cormorant text-xl text-[#590907] font-semibold mb-3">{item.title}</h4>
+                    <p className="font-inter text-sm text-[#6B665E] leading-relaxed">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#392F29] text-[#FEF0E5] font-manrope font-semibold text-sm hover:bg-[#8B6E5C] transition-colors duration-300 group"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#590907] text-[#FAF6F0] font-manrope font-semibold text-sm hover:bg-[#2A1616] transition-colors duration-300 group shadow-sm"
                 >
                   Get in Touch
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#8B6E5C] text-[#8B6E5C] font-manrope font-semibold text-sm hover:bg-[#8B6E5C] hover:text-[#FEF0E5] transition-colors duration-300"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#590907] text-[#590907] font-manrope font-semibold text-sm hover:bg-[#590907] hover:text-[#FAF6F0] transition-colors duration-300"
                 >
                   Chat on WhatsApp
                 </a>
@@ -112,13 +112,13 @@ export default function AboutPage() {
       </section>
 
       {/* Design pillars */}
-      <section className="bg-[#F7F3EE] py-20 lg:py-28">
+      <section className="bg-[#E8D2B5]/20 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-14">
-            <p className="label-sm text-[#8B6E5C] mb-4">Design Pillars</p>
-            <h2 className="heading-xl text-[#392F29]">
+            <p className="label-sm text-[#590907] mb-4 tracking-widest">Design Pillars</p>
+            <h2 className="heading-xl text-[#2A1616]">
               Thoughtful Design.{" "}
-              <em className="italic text-[#8B6E5C]">Timeless Spaces.</em>
+              <em className="italic text-[#590907]">Timeless Spaces.</em>
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,10 +130,10 @@ export default function AboutPage() {
               { n: "05", title: "Lighting & Textures", desc: "Lighting transforms a room. We design layered lighting plans that enhance every space." },
               { n: "06", title: "Personalized Designs", desc: "No two clients are the same. Every project is uniquely yours." },
             ].map((p) => (
-              <div key={p.n} className="p-8 bg-[#FEF0E5] border-t-2 border-[#CFAB93]">
-                <span className="font-cormorant text-4xl font-light text-[#E8D9CC] block mb-4">{p.n}</span>
-                <h3 className="font-cormorant text-xl text-[#392F29] font-semibold mb-3">{p.title}</h3>
-                <p className="font-inter text-sm text-[#8A817A] leading-relaxed">{p.desc}</p>
+              <div key={p.n} className="p-8 bg-[#FAF6F0] border-t-2 border-[#590907] shadow-xs">
+                <span className="font-cormorant text-4xl font-light text-[#E8D2B5] block mb-4">{p.n}</span>
+                <h3 className="font-cormorant text-xl text-[#2A1616] font-semibold mb-3">{p.title}</h3>
+                <p className="font-inter text-sm text-[#6B665E] leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -145,4 +145,3 @@ export default function AboutPage() {
     </>
   );
 }
-

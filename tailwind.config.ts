@@ -10,13 +10,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory: "#FEF0E5",
-        taupe: "#8B6E5C",
-        "dusty-beige": "#CFAB93",
-        "dark-brown": "#392F29",
-        "soft-cream": "#F7F3EE",
-        "warm-grey": "#8A817A",
-        "light-beige": "#E8D9CC",
+        // User requested core palette:
+        oxblood: "#590907",
+        champagne: "#E8D2B5",
+        sage: "#A5A79B",
+
+        // Supporting luxury tones:
+        linen: "#FAF6F0",
+        cream: "#F4ECE1",
+        "dark-espresso": "#2A1616",
+        "muted-charcoal": "#6B665E",
+
+        // Palette mapping aliases:
+        ivory: "#FAF6F0",
+        taupe: "#590907",
+        "dusty-beige": "#E8D2B5",
+        "dark-brown": "#590907",
+        "soft-cream": "#F4ECE1",
+        "warm-grey": "#A5A79B",
+        "light-beige": "#E8D2B5",
       },
       fontFamily: {
         cormorant: ["var(--font-cormorant)", "Georgia", "serif"],
@@ -30,4 +42,3 @@ const config: Config = {
 };
 
 export default config;
-

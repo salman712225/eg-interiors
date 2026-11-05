@@ -33,21 +33,21 @@ export default async function ProjectDetailPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-0 pb-0 bg-[#392F29]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12">
+      <section className="relative pt-0 pb-0 bg-[#590907]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-12">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 font-manrope text-xs text-[#CFAB93] mb-8 hover:text-[#FEF0E5] transition-colors"
+            className="inline-flex items-center gap-2 font-manrope text-xs text-[#E8D2B5] mb-8 hover:text-[#FAF6F0] transition-colors"
           >
             <ArrowLeft size={14} /> Back to Projects
           </Link>
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <p className="label-sm text-[#CFAB93] mb-3">{project.category}</p>
-              <h1 className="heading-display text-[#FEF0E5]">{project.title}</h1>
+              <p className="label-sm text-[#E8D2B5] mb-3 tracking-widest">{project.category}</p>
+              <h1 className="heading-display text-[#FAF6F0]">{project.title}</h1>
             </div>
-            <div className="flex items-center gap-2 text-[#FEF0E5]/60 mt-2">
-              <MapPin size={15} className="text-[#CFAB93]" />
+            <div className="flex items-center gap-2 text-[#E8D2B5] mt-2">
+              <MapPin size={15} className="text-[#E8D2B5]" />
               <span className="font-inter text-sm">{project.location}</span>
             </div>
           </div>
@@ -65,20 +65,20 @@ export default async function ProjectDetailPage({ params }: Props) {
       </section>
 
       {/* Content */}
-      <section className="bg-[#FEF0E5] py-20 lg:py-28">
+      <section className="bg-[#FAF6F0] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <h2 className="heading-md text-[#392F29] mb-5">About This Project</h2>
-              <p className="body-lg text-[#8A817A] mb-8 leading-relaxed">{project.description}</p>
+              <h2 className="heading-md text-[#2A1616] mb-5">About This Project</h2>
+              <p className="body-lg text-[#6B665E] mb-8 leading-relaxed">{project.description}</p>
 
-              <h3 className="font-cormorant text-2xl text-[#392F29] font-semibold mb-4">Design Concept</h3>
-              <p className="body-md text-[#8A817A] mb-10 leading-relaxed">{project.concept}</p>
+              <h3 className="font-cormorant text-2xl text-[#2A1616] font-semibold mb-4">Design Concept</h3>
+              <p className="body-md text-[#6B665E] mb-10 leading-relaxed">{project.concept}</p>
 
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#392F29] text-[#FEF0E5] font-manrope font-semibold text-sm hover:bg-[#8B6E5C] transition-colors duration-300 group"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#590907] text-[#FAF6F0] font-manrope font-semibold text-sm hover:bg-[#2A1616] transition-colors duration-300 group shadow-sm"
                 >
                   Enquire About a Similar Project
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -87,7 +87,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#8B6E5C] text-[#8B6E5C] font-manrope font-semibold text-sm hover:bg-[#8B6E5C] hover:text-[#FEF0E5] transition-colors"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-[#590907] text-[#590907] font-manrope font-semibold text-sm hover:bg-[#590907] hover:text-[#FAF6F0] transition-colors"
                 >
                   Chat on WhatsApp
                 </a>
@@ -96,31 +96,31 @@ export default async function ProjectDetailPage({ params }: Props) {
 
             {/* Sidebar */}
             <div>
-              <div className="bg-[#F7F3EE] p-8 sticky top-28">
-                <h3 className="font-cormorant text-xl text-[#392F29] font-semibold mb-6">Project Details</h3>
+              <div className="bg-[#E8D2B5]/25 border border-[#E8D2B5] p-8 sticky top-28 shadow-xs">
+                <h3 className="font-cormorant text-xl text-[#2A1616] font-semibold mb-6">Project Details</h3>
                 <dl className="space-y-4">
                   {[
                     { label: "Category", value: project.category },
                     { label: "Location", value: project.location },
                   ].map((d) => (
                     <div key={d.label}>
-                      <dt className="font-manrope text-xs uppercase tracking-wider text-[#8A817A] mb-1">{d.label}</dt>
-                      <dd className="font-cormorant text-lg text-[#392F29]">{d.value}</dd>
+                      <dt className="font-manrope text-xs uppercase tracking-wider text-[#590907] mb-1 font-semibold">{d.label}</dt>
+                      <dd className="font-cormorant text-lg text-[#2A1616]">{d.value}</dd>
                     </div>
                   ))}
                   <div>
-                    <dt className="font-manrope text-xs uppercase tracking-wider text-[#8A817A] mb-2">Tags</dt>
+                    <dt className="font-manrope text-xs uppercase tracking-wider text-[#590907] mb-2 font-semibold">Tags</dt>
                     <dd className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="px-3 py-1 bg-[#E8D9CC] font-inter text-xs text-[#8A817A]">{tag}</span>
+                        <span key={tag} className="px-3 py-1 bg-[#A5A79B]/20 border border-[#A5A79B]/40 font-inter text-xs text-[#2A1616]">{tag}</span>
                       ))}
                     </dd>
                   </div>
                 </dl>
-                <hr className="border-[#E8D9CC] my-6" />
+                <hr className="border-[#E8D2B5] my-6" />
                 <Link
                   href="/contact"
-                  className="block text-center py-3.5 bg-[#392F29] text-[#FEF0E5] font-manrope font-semibold text-sm hover:bg-[#8B6E5C] transition-colors"
+                  className="block text-center py-3.5 bg-[#590907] text-[#FAF6F0] font-manrope font-semibold text-sm hover:bg-[#2A1616] transition-colors shadow-sm"
                 >
                   Request a Similar Design
                 </Link>
@@ -132,12 +132,12 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       {/* Related projects */}
       {related.length > 0 && (
-        <section className="bg-[#F7F3EE] py-20">
+        <section className="bg-[#E8D2B5]/20 py-20 border-t border-[#E8D2B5]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="heading-lg text-[#392F29] mb-10">Related Projects</h2>
+            <h2 className="heading-lg text-[#2A1616] mb-10">Related Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {related.map((p) => (
-                <Link key={p.id} href={`/projects/${p.slug}`} className="group block">
+                <Link key={p.id} href={`/projects/${p.slug}`} className="group block bg-[#FAF6F0] p-4 shadow-sm border border-[#E8D2B5]/40 hover:border-[#590907] transition-all">
                   <div className="relative aspect-[4/3] overflow-hidden mb-4">
                     <Image
                       src={p.image}
@@ -147,8 +147,8 @@ export default async function ProjectDetailPage({ params }: Props) {
                       sizes="33vw"
                     />
                   </div>
-                  <p className="label-sm text-[#8B6E5C] mb-1">{p.category}</p>
-                  <h3 className="font-cormorant text-xl text-[#392F29] font-semibold group-hover:text-[#8B6E5C] transition-colors">{p.title}</h3>
+                  <p className="label-sm text-[#590907] mb-1 tracking-widest">{p.category}</p>
+                  <h3 className="font-cormorant text-xl text-[#2A1616] font-semibold group-hover:text-[#590907] transition-colors">{p.title}</h3>
                 </Link>
               ))}
             </div>
@@ -160,4 +160,3 @@ export default async function ProjectDetailPage({ params }: Props) {
     </>
   );
 }
-
