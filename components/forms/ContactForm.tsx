@@ -109,8 +109,8 @@ export default function ContactForm() {
     placeholder?: string;
   }) => (
     <div>
-      <label htmlFor={name} className="block font-manrope text-xs font-semibold text-[#2A1616] mb-2 uppercase tracking-wide">
-        {label} {required && <span className="text-[#590907]">*</span>}
+      <label htmlFor={name} className="block font-manrope text-xs font-semibold text-theme-dark mb-2 uppercase tracking-wide">
+        {label} {required && <span className="text-theme-primary">*</span>}
       </label>
       <input
         id={name}
@@ -119,7 +119,7 @@ export default function ContactForm() {
         required={required}
         placeholder={placeholder}
         aria-describedby={errors[name] ? `${name}-error` : undefined}
-        className="w-full px-4 py-3 bg-white border border-[#E8D2B5] font-inter text-sm text-[#2A1616] placeholder:text-[#A5A79B] focus:outline-none focus:border-[#590907] transition-colors"
+        className="w-full px-4 py-3 bg-white border border-theme-surface font-inter text-sm text-theme-dark placeholder:text-theme-secondary focus:outline-none focus:border-theme-primary transition-colors"
       />
       {errors[name] && (
         <p id={`${name}-error`} role="alert" className="mt-1.5 font-inter text-xs text-red-600">
@@ -132,13 +132,13 @@ export default function ContactForm() {
   if (state === "success") {
     return (
       <div className="flex flex-col items-center justify-center py-16 text-center">
-        <div className="w-16 h-16 bg-[#590907]/10 flex items-center justify-center mb-6 rounded-full">
-          <svg className="w-8 h-8 text-[#590907]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <div className="w-16 h-16 bg-theme-primary/10 flex items-center justify-center mb-6 rounded-full">
+          <svg className="w-8 h-8 text-theme-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
         </div>
-        <h3 className="font-cormorant text-2xl text-[#2A1616] mb-3">Enquiry Received!</h3>
-        <p className="font-inter text-sm text-[#6B665E] max-w-sm leading-relaxed">
+        <h3 className="font-cormorant text-2xl text-theme-dark mb-3">Enquiry Received!</h3>
+        <p className="font-inter text-sm text-theme-muted max-w-sm leading-relaxed">
           Thank you for contacting E.G. Interiors! Your enquiry has been received. Our team will get in touch with you shortly.
         </p>
       </div>
@@ -154,8 +154,8 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Field name="phone" label="Mobile Number" type="tel" placeholder="10-digit mobile number" />
         <div>
-          <label htmlFor="projectType" className="block font-manrope text-xs font-semibold text-[#2A1616] mb-2 uppercase tracking-wide">
-            Project Type <span className="text-[#590907]">*</span>
+          <label htmlFor="projectType" className="block font-manrope text-xs font-semibold text-theme-dark mb-2 uppercase tracking-wide">
+            Project Type <span className="text-theme-primary">*</span>
           </label>
           <select
             id="projectType"
@@ -163,7 +163,7 @@ export default function ContactForm() {
             required
             defaultValue=""
             aria-describedby={errors.projectType ? "projectType-error" : undefined}
-            className="w-full px-4 py-3 bg-white border border-[#E8D2B5] font-inter text-sm text-[#2A1616] focus:outline-none focus:border-[#590907] transition-colors"
+            className="w-full px-4 py-3 bg-white border border-theme-surface font-inter text-sm text-theme-dark focus:outline-none focus:border-theme-primary transition-colors"
           >
             <option value="" disabled>Select project type</option>
             {projectTypes.map((t) => (
@@ -182,14 +182,14 @@ export default function ContactForm() {
         <Field name="area" label="Approximate Area (sq ft)" required={false} placeholder="e.g. 1200 sq ft" />
       </div>
       <div>
-        <label htmlFor="budget" className="block font-manrope text-xs font-semibold text-[#2A1616] mb-2 uppercase tracking-wide">
+        <label htmlFor="budget" className="block font-manrope text-xs font-semibold text-theme-dark mb-2 uppercase tracking-wide">
           Estimated Budget
         </label>
         <select
           id="budget"
           name="budget"
           defaultValue=""
-          className="w-full px-4 py-3 bg-white border border-[#E8D2B5] font-inter text-sm text-[#2A1616] focus:outline-none focus:border-[#590907] transition-colors"
+          className="w-full px-4 py-3 bg-white border border-theme-surface font-inter text-sm text-theme-dark focus:outline-none focus:border-theme-primary transition-colors"
         >
           <option value="">Select budget range (optional)</option>
           {budgetRanges.map((b) => (
@@ -198,7 +198,7 @@ export default function ContactForm() {
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="block font-manrope text-xs font-semibold text-[#2A1616] mb-2 uppercase tracking-wide">
+        <label htmlFor="message" className="block font-manrope text-xs font-semibold text-theme-dark mb-2 uppercase tracking-wide">
           Message
         </label>
         <textarea
@@ -206,7 +206,7 @@ export default function ContactForm() {
           name="message"
           rows={4}
           placeholder="Tell us about your project, requirements, or any questions you have..."
-          className="w-full px-4 py-3 bg-white border border-[#E8D2B5] font-inter text-sm text-[#2A1616] placeholder:text-[#A5A79B] focus:outline-none focus:border-[#590907] transition-colors resize-none"
+          className="w-full px-4 py-3 bg-white border border-theme-surface font-inter text-sm text-theme-dark placeholder:text-theme-secondary focus:outline-none focus:border-theme-primary transition-colors resize-none"
         />
       </div>
       <div>
@@ -214,13 +214,13 @@ export default function ContactForm() {
           <input
             type="checkbox"
             name="consent"
-            className="mt-0.5 w-4 h-4 border-[#590907] accent-[#590907]"
+            className="mt-0.5 w-4 h-4 border-theme-primary accent-theme-primary"
             aria-describedby={errors.consent ? "consent-error" : undefined}
           />
-          <span className="font-inter text-xs text-[#6B665E] leading-relaxed">
+          <span className="font-inter text-xs text-theme-muted leading-relaxed">
             I agree that E.G. Interiors may contact me regarding my enquiry. I have read and accept the{" "}
-            <a href="/privacy-policy" className="text-[#590907] underline font-medium">Privacy Policy</a>.{" "}
-            <span className="text-[#590907]">*</span>
+            <a href="/privacy-policy" className="text-theme-primary underline font-medium">Privacy Policy</a>.{" "}
+            <span className="text-theme-primary">*</span>
           </span>
         </label>
         {errors.consent && (
@@ -237,11 +237,11 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state === "loading"}
-        className="w-full py-4 bg-[#590907] text-[#FAF6F0] font-manrope font-semibold text-sm hover:bg-[#2A1616] transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed shadow-sm"
+        className="w-full py-4 bg-theme-primary text-theme-bg font-manrope font-semibold text-sm hover:bg-theme-dark transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed shadow-sm"
       >
         {state === "loading" ? "Sending Enquiry…" : "Send Enquiry"}
       </button>
-      <p className="font-inter text-xs text-[#6B665E]/80 text-center">
+      <p className="font-inter text-xs text-theme-muted/80 text-center">
         * Note: Form email delivery requires Web3Forms API key configuration. Contact via WhatsApp for instant response.
       </p>
     </form>

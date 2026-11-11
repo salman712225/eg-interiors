@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
 import { siteConfig } from "@/data/site-config";
 
 const cormorant = Cormorant_Garamond({
@@ -72,10 +73,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="1"
+      suppressHydrationWarning
       className={`${cormorant.variable} ${playfair.variable} ${inter.variable} ${manrope.variable}`}
     >
       <head>
         <link rel="icon" href="/logo/Logo-removebg-preview.png" type="image/png" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('eg-interiors-theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -108,6 +116,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ThemeSwitcher />
         <WhatsAppButton />
       </body>
     </html>

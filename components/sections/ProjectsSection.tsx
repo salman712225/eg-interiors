@@ -17,22 +17,22 @@ export default function ProjectsSection({ showAll = false }: { showAll?: boolean
       : displayProjects.filter((p) => p.category === activeCategory);
 
   return (
-    <section className="bg-[#FAF6F0] py-20 lg:py-32" aria-label="Our Projects">
+    <section className="bg-theme-bg py-20 lg:py-32" aria-label="Our Projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <div className="max-w-xl">
-            <p className="label-sm text-[#590907] mb-4 tracking-widest">Our Portfolio</p>
-            <h2 className="heading-xl text-[#2A1616]">
+            <p className="label-sm text-theme-primary mb-4 tracking-widest">Our Portfolio</p>
+            <h2 className="heading-xl text-theme-dark">
               Spaces We Have{" "}
-              <em className="italic text-[#590907]">Transformed.</em>
+              <em className="italic text-theme-primary">Transformed.</em>
             </h2>
           </div>
           {!showAll && (
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 font-manrope text-sm font-semibold text-[#590907] border-b-2 border-[#590907] pb-0.5 hover:text-[#2A1616] hover:border-[#2A1616] transition-colors group self-start lg:self-auto"
+              className="inline-flex items-center gap-2 font-manrope text-sm font-semibold text-theme-primary border-b-2 border-theme-primary pb-0.5 hover:text-theme-dark hover:border-theme-dark transition-colors group self-start lg:self-auto"
             >
               View All Projects
               <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -51,8 +51,8 @@ export default function ProjectsSection({ showAll = false }: { showAll?: boolean
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 font-manrope text-xs font-semibold tracking-wide uppercase transition-all duration-200 ${
                   activeCategory === cat
-                    ? "bg-[#590907] text-[#FAF6F0] shadow-xs"
-                    : "bg-[#E8D2B5] text-[#2A1616] hover:bg-[#A5A79B] hover:text-[#FAF6F0]"
+                    ? "bg-theme-primary text-theme-bg shadow-xs"
+                    : "bg-theme-surface text-theme-dark hover:bg-theme-secondary hover:text-theme-bg"
                 }`}
               >
                 {cat}
@@ -79,11 +79,11 @@ export default function ProjectsSection({ showAll = false }: { showAll?: boolean
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-[#590907]/0 group-hover:bg-[#590907]/75 transition-all duration-500" />
+                <div className="absolute inset-0 bg-theme-primary/0 group-hover:bg-theme-primary/75 transition-all duration-500" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-400 translate-y-4 group-hover:translate-y-0">
-                  <p className="label-sm text-[#E8D2B5] mb-1 tracking-widest">{project.category}</p>
-                  <h3 className="font-cormorant text-xl text-[#FAF6F0] font-light mb-1">{project.title}</h3>
-                  <p className="font-inter text-xs text-[#E8D2B5]/85">{project.location}</p>
+                  <p className="label-sm text-theme-surface mb-1 tracking-widest">{project.category}</p>
+                  <h3 className="font-cormorant text-xl text-theme-bg font-light mb-1">{project.title}</h3>
+                  <p className="font-inter text-xs text-theme-surface/85">{project.location}</p>
                 </div>
               </div>
             </div>
@@ -93,14 +93,14 @@ export default function ProjectsSection({ showAll = false }: { showAll?: boolean
         {/* Lightbox */}
         {lightboxImg && (
           <div
-            className="fixed inset-0 z-[100] bg-[#2A1616]/95 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] bg-theme-dark/95 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={() => setLightboxImg(null)}
             role="dialog"
             aria-modal="true"
             aria-label="Project image lightbox"
           >
             <button
-              className="absolute top-4 right-4 text-[#FAF6F0] p-2 hover:text-[#E8D2B5] transition-colors"
+              className="absolute top-4 right-4 text-theme-bg p-2 hover:text-theme-surface transition-colors"
               onClick={() => setLightboxImg(null)}
               aria-label="Close lightbox"
             >

@@ -15,15 +15,15 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#590907]">
+      <section className="pt-36 pb-20 bg-theme-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="label-sm text-[#E8D2B5] mb-6 tracking-widest">What We Offer</p>
-            <h1 className="heading-display text-[#FAF6F0] mb-6">
+            <p className="label-sm text-theme-surface mb-6 tracking-widest">What We Offer</p>
+            <h1 className="heading-display text-theme-bg mb-6">
               Interior Design{" "}
-              <em className="italic text-[#E8D2B5]">Services.</em>
+              <em className="italic text-theme-surface">Services.</em>
             </h1>
-            <p className="body-lg text-[#FAF6F0]/80 max-w-xl">
+            <p className="body-lg text-theme-bg/80 max-w-xl">
               From concept to complete execution — we offer a comprehensive range of interior design services for homes, apartments, and commercial spaces in Chennai.
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services list */}
-      <section className="bg-[#FAF6F0] py-20 lg:py-32">
+      <section className="bg-theme-bg py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
           {services.map((service, idx) => (
             <div
@@ -53,18 +53,18 @@ export default function ServicesPage() {
 
               {/* Content */}
               <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
-                <p className="label-sm text-[#590907] mb-4 tracking-widest">Interior Design Service</p>
-                <h2 className="heading-lg text-[#2A1616] mb-5">{service.title}</h2>
-                <p className="body-lg text-[#6B665E] mb-6 leading-relaxed">{service.description}</p>
+                <p className="label-sm text-theme-primary mb-4 tracking-widest">Interior Design Service</p>
+                <h2 className="heading-lg text-theme-dark mb-5">{service.title}</h2>
+                <p className="body-lg text-theme-muted mb-6 leading-relaxed">{service.description}</p>
 
                 <div className="mb-8">
-                  <h3 className="font-manrope text-xs font-semibold uppercase tracking-wider text-[#590907] mb-4">
+                  <h3 className="font-manrope text-xs font-semibold uppercase tracking-wider text-theme-primary mb-4">
                     What&apos;s Included
                   </h3>
                   <ul className="space-y-2">
                     {service.deliverables.map((d) => (
-                      <li key={d} className="flex items-start gap-3 font-inter text-sm text-[#6B665E]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#E8D2B5] shrink-0" />
+                      <li key={d} className="flex items-start gap-3 font-inter text-sm text-theme-muted">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-theme-surface shrink-0" />
                         {d}
                       </li>
                     ))}
@@ -74,14 +74,14 @@ export default function ServicesPage() {
                 <div className="flex flex-wrap gap-3">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#590907] text-[#FAF6F0] font-manrope font-semibold text-sm hover:bg-[#2A1616] transition-colors duration-300 group shadow-sm"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-theme-primary text-theme-bg font-manrope font-semibold text-sm hover:bg-theme-dark transition-colors duration-300 group shadow-sm"
                   >
                     Learn More
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#590907] text-[#590907] font-manrope font-semibold text-sm hover:bg-[#590907] hover:text-[#FAF6F0] transition-colors duration-300"
+                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-theme-primary text-theme-primary font-manrope font-semibold text-sm hover:bg-theme-primary hover:text-theme-bg transition-colors duration-300"
                   >
                     Get a Quote
                   </Link>

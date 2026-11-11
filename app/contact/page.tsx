@@ -14,15 +14,15 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-36 pb-20 bg-[#590907]">
+      <section className="pt-36 pb-20 bg-theme-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="label-sm text-[#E8D2B5] mb-6 tracking-widest">Let&apos;s Connect</p>
-            <h1 className="heading-display text-[#FAF6F0] mb-6">
+            <p className="label-sm text-theme-surface mb-6 tracking-widest">Let&apos;s Connect</p>
+            <h1 className="heading-display text-theme-bg mb-6">
               Start Your{" "}
-              <em className="italic text-[#E8D2B5]">Design Journey.</em>
+              <em className="italic text-theme-surface">Design Journey.</em>
             </h1>
-            <p className="body-lg text-[#FAF6F0]/80 max-w-xl">
+            <p className="body-lg text-theme-bg/80 max-w-xl">
               We&apos;d love to hear about your project. Reach out and our team will get back to you promptly.
             </p>
           </div>
@@ -30,17 +30,17 @@ export default function ContactPage() {
       </section>
 
       {/* Main contact section */}
-      <section className="bg-[#FAF6F0] py-20 lg:py-28">
+      <section className="bg-theme-bg py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
             {/* Left: contact info */}
             <div>
-              <h2 className="heading-lg text-[#2A1616] mb-4">
+              <h2 className="heading-lg text-theme-dark mb-4">
                 Let&apos;s Discuss Your{" "}
-                <em className="italic text-[#590907]">Dream Space.</em>
+                <em className="italic text-theme-primary">Dream Space.</em>
               </h2>
-              <p className="body-md text-[#6B665E] mb-10 leading-relaxed">
+              <p className="body-md text-theme-muted mb-10 leading-relaxed">
                 Whether you&apos;re planning a complete home interior, a single room refresh, or a commercial space — we are here to listen, advise, and create something extraordinary for you.
               </p>
 
@@ -49,12 +49,12 @@ export default function ContactPage() {
                   href={`tel:+91${siteConfig.contact.phone1}`}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-12 h-12 bg-[#E8D2B5] flex items-center justify-center shrink-0 group-hover:bg-[#590907] transition-colors rounded-xs">
-                    <Phone size={18} className="text-[#590907] group-hover:text-[#FAF6F0] transition-colors" />
+                  <div className="w-12 h-12 bg-theme-surface flex items-center justify-center shrink-0 group-hover:bg-theme-primary transition-colors rounded-xs">
+                    <Phone size={18} className="text-theme-primary group-hover:text-theme-bg transition-colors" />
                   </div>
                   <div>
-                    <p className="font-manrope text-xs uppercase tracking-wider text-[#A5A79B] mb-0.5 font-semibold">Primary Contact</p>
-                    <p className="font-cormorant text-xl text-[#2A1616] font-semibold group-hover:text-[#590907] transition-colors">
+                    <p className="font-manrope text-xs uppercase tracking-wider text-theme-secondary mb-0.5 font-semibold">Primary Contact</p>
+                    <p className="font-cormorant text-xl text-theme-dark font-semibold group-hover:text-theme-primary transition-colors">
                       {siteConfig.contact.phone1Display}
                     </p>
                   </div>
@@ -64,12 +64,12 @@ export default function ContactPage() {
                   href={`tel:+91${siteConfig.contact.phone2}`}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-12 h-12 bg-[#E8D2B5] flex items-center justify-center shrink-0 group-hover:bg-[#590907] transition-colors rounded-xs">
-                    <Phone size={18} className="text-[#590907] group-hover:text-[#FAF6F0] transition-colors" />
+                  <div className="w-12 h-12 bg-theme-surface flex items-center justify-center shrink-0 group-hover:bg-theme-primary transition-colors rounded-xs">
+                    <Phone size={18} className="text-theme-primary group-hover:text-theme-bg transition-colors" />
                   </div>
                   <div>
-                    <p className="font-manrope text-xs uppercase tracking-wider text-[#A5A79B] mb-0.5 font-semibold">Alternate Contact</p>
-                    <p className="font-cormorant text-xl text-[#2A1616] font-semibold group-hover:text-[#590907] transition-colors">
+                    <p className="font-manrope text-xs uppercase tracking-wider text-theme-secondary mb-0.5 font-semibold">Alternate Contact</p>
+                    <p className="font-cormorant text-xl text-theme-dark font-semibold group-hover:text-theme-primary transition-colors">
                       {siteConfig.contact.phone2Display}
                     </p>
                   </div>
@@ -81,12 +81,12 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-12 h-12 bg-[#E8D2B5] flex items-center justify-center shrink-0 group-hover:bg-[#25D366] transition-colors rounded-xs">
-                    <MessageCircle size={18} className="text-[#590907] group-hover:text-white transition-colors" />
+                  <div className="w-12 h-12 bg-theme-surface flex items-center justify-center shrink-0 group-hover:bg-[#25D366] transition-colors rounded-xs">
+                    <MessageCircle size={18} className="text-theme-primary group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <p className="font-manrope text-xs uppercase tracking-wider text-[#A5A79B] mb-0.5 font-semibold">WhatsApp</p>
-                    <p className="font-cormorant text-xl text-[#2A1616] font-semibold group-hover:text-[#25D366] transition-colors">
+                    <p className="font-manrope text-xs uppercase tracking-wider text-theme-secondary mb-0.5 font-semibold">WhatsApp</p>
+                    <p className="font-cormorant text-xl text-theme-dark font-semibold group-hover:text-[#25D366] transition-colors">
                       Chat with Us
                     </p>
                   </div>
@@ -98,24 +98,24 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-12 h-12 bg-[#E8D2B5] flex items-center justify-center shrink-0 group-hover:bg-[#590907] transition-colors rounded-xs">
-                    <InstagramIcon size={18} className="text-[#590907] group-hover:text-[#FAF6F0] transition-colors" />
+                  <div className="w-12 h-12 bg-theme-surface flex items-center justify-center shrink-0 group-hover:bg-theme-primary transition-colors rounded-xs">
+                    <InstagramIcon size={18} className="text-theme-primary group-hover:text-theme-bg transition-colors" />
                   </div>
                   <div>
-                    <p className="font-manrope text-xs uppercase tracking-wider text-[#A5A79B] mb-0.5 font-semibold">Instagram</p>
-                    <p className="font-cormorant text-xl text-[#2A1616] font-semibold group-hover:text-[#590907] transition-colors">
+                    <p className="font-manrope text-xs uppercase tracking-wider text-theme-secondary mb-0.5 font-semibold">Instagram</p>
+                    <p className="font-cormorant text-xl text-theme-dark font-semibold group-hover:text-theme-primary transition-colors">
                       {siteConfig.contact.instagramHandle}
                     </p>
                   </div>
                 </a>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#E8D2B5] flex items-center justify-center shrink-0 rounded-xs">
-                    <MapPin size={18} className="text-[#590907]" />
+                  <div className="w-12 h-12 bg-theme-surface flex items-center justify-center shrink-0 rounded-xs">
+                    <MapPin size={18} className="text-theme-primary" />
                   </div>
                   <div>
-                    <p className="font-manrope text-xs uppercase tracking-wider text-[#A5A79B] mb-0.5 font-semibold">Address</p>
-                    <p className="font-cormorant text-xl text-[#2A1616] font-semibold leading-snug">
+                    <p className="font-manrope text-xs uppercase tracking-wider text-theme-secondary mb-0.5 font-semibold">Address</p>
+                    <p className="font-cormorant text-xl text-theme-dark font-semibold leading-snug">
                       {siteConfig.address.street},<br />
                       {siteConfig.address.city} — {siteConfig.address.pincode}
                     </p>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                       href={`https://maps.google.com/?q=${siteConfig.address.mapsQuery}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-manrope text-xs text-[#590907] mt-1 inline-block font-semibold hover:underline"
+                      className="font-manrope text-xs text-theme-primary mt-1 inline-block font-semibold hover:underline"
                     >
                       Get Directions →
                     </a>
@@ -146,9 +146,9 @@ export default function ContactPage() {
             </div>
 
             {/* Right: form */}
-            <div className="bg-[#E8D2B5]/25 border border-[#E8D2B5] p-8 lg:p-10 shadow-xs">
-              <h2 className="font-cormorant text-2xl text-[#2A1616] font-semibold mb-2">Send Us an Enquiry</h2>
-              <p className="font-inter text-sm text-[#6B665E] mb-8">
+            <div className="bg-theme-surface/25 border border-theme-surface p-8 lg:p-10 shadow-xs">
+              <h2 className="font-cormorant text-2xl text-theme-dark font-semibold mb-2">Send Us an Enquiry</h2>
+              <p className="font-inter text-sm text-theme-muted mb-8">
                 Fill in the details below and we&apos;ll get back to you as soon as possible.
               </p>
               <ContactForm />
@@ -158,18 +158,18 @@ export default function ContactPage() {
       </section>
 
       {/* Map placeholder */}
-      <section className="bg-[#E8D2B5]/20 py-12 border-t border-[#E8D2B5]">
+      <section className="bg-theme-surface/20 py-12 border-t border-theme-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#FAF6F0] border border-[#E8D2B5] flex items-center justify-center h-64 lg:h-80 shadow-xs">
+          <div className="bg-theme-bg border border-theme-surface flex items-center justify-center h-64 lg:h-80 shadow-xs">
             <div className="text-center">
-              <MapPin size={32} className="text-[#590907] mx-auto mb-3" />
-              <p className="font-cormorant text-xl text-[#2A1616] font-semibold">Mettu Street, Butt Road</p>
-              <p className="font-inter text-sm text-[#6B665E] mb-4">Chennai — 600016, Tamil Nadu</p>
+              <MapPin size={32} className="text-theme-primary mx-auto mb-3" />
+              <p className="font-cormorant text-xl text-theme-dark font-semibold">Mettu Street, Butt Road</p>
+              <p className="font-inter text-sm text-theme-muted mb-4">Chennai — 600016, Tamil Nadu</p>
               <a
                 href={`https://maps.google.com/?q=${siteConfig.address.mapsQuery}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-manrope text-sm font-semibold text-[#590907] border-b-2 border-[#590907] hover:text-[#2A1616] hover:border-[#2A1616] transition-colors"
+                className="font-manrope text-sm font-semibold text-theme-primary border-b-2 border-theme-primary hover:text-theme-dark hover:border-theme-dark transition-colors"
               >
                 Open in Google Maps →
               </a>

@@ -12,17 +12,17 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function WhyUsSection() {
   return (
-    <section className="bg-[#590907] py-20 lg:py-32" aria-label="Why Choose E.G. Interiors">
+    <section className="bg-theme-primary py-20 lg:py-32" aria-label="Why Choose E.G. Interiors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="max-w-2xl mb-16">
-          <p className="label-sm text-[#E8D2B5] mb-4 tracking-widest">Our Difference</p>
-          <h2 className="heading-xl text-[#FAF6F0] mb-6">
+          <p className="label-sm text-theme-surface mb-4 tracking-widest">Our Difference</p>
+          <h2 className="heading-xl text-theme-bg mb-6">
             Why Choose{" "}
-            <em className="italic text-[#E8D2B5]">E.G. Interiors?</em>
+            <em className="italic text-theme-surface">E.G. Interiors?</em>
           </h2>
-          <p className="body-lg text-[#FAF6F0]/75">
+          <p className="body-lg text-theme-bg/75">
             We are committed to delivering exceptional design experiences — from the first conversation to the final handover.
           </p>
         </div>
@@ -33,15 +33,15 @@ export default function WhyUsSection() {
             return (
               <div
                 key={item.title}
-                className="border border-[#E8D2B5]/25 p-8 hover:border-[#E8D2B5] transition-all duration-300 group bg-[#2A1616]/30 backdrop-blur-xs"
+                className="border border-theme-surface/25 p-8 hover:border-theme-surface transition-all duration-300 group bg-theme-dark/30 backdrop-blur-xs"
               >
-                <div className="w-12 h-12 flex items-center justify-center bg-[#FAF6F0]/10 mb-6 group-hover:bg-[#E8D2B5] transition-colors rounded-xs">
-                  <Icon size={22} className="text-[#E8D2B5] group-hover:text-[#590907] transition-colors" />
+                <div className="w-12 h-12 flex items-center justify-center bg-theme-bg/10 mb-6 group-hover:bg-theme-surface transition-colors rounded-xs">
+                  <Icon size={22} className="text-theme-surface group-hover:text-theme-primary transition-colors" />
                 </div>
-                <h3 className="font-cormorant text-xl text-[#FAF6F0] font-semibold mb-3">
+                <h3 className="font-cormorant text-xl text-theme-bg font-semibold mb-3">
                   {item.title}
                 </h3>
-                <p className="font-inter text-sm text-[#FAF6F0]/75 leading-relaxed">
+                <p className="font-inter text-sm text-theme-bg/75 leading-relaxed">
                   {item.description}
                 </p>
               </div>

@@ -2,6 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
+:root,
+html[data-theme="1"] {
+  --theme-primary: 89 9 7;
+  --theme-surface: 232 210 181;
+  --theme-secondary: 165 167 155;
+  --theme-bg: 250 246 240;
+  --theme-dark: 42 22 22;
+  --theme-muted: 107 102 94;
+  --theme-on-dark: 250 246 240;
+  --theme-on-dark-accent: 232 210 181;
+}
+
+html[data-theme="2"] {
+  --theme-primary: 13 74 58;
+  --theme-surface: 240 217 168;
+  --theme-secondary: 127 168 150;
+  --theme-bg: 248 250 247;
+  --theme-dark: 11 40 32;
+  --theme-muted: 83 105 97;
+  --theme-on-dark: 248 250 247;
+  --theme-on-dark-accent: 240 217 168;
+}
+
+html[data-theme="3"] {
+  --theme-primary: 18 52 98;
+  --theme-surface: 244 211 161;
+  --theme-secondary: 125 155 184;
+  --theme-bg: 247 249 252;
+  --theme-dark: 13 31 60;
+  --theme-muted: 82 99 122;
+  --theme-on-dark: 247 249 252;
+  --theme-on-dark-accent: 244 211 161;
+}
+
+html[data-theme="4"] {
+  --theme-primary: 158 59 36;
+  --theme-surface: 242 214 190;
+  --theme-secondary: 142 155 135;
+  --theme-bg: 252 247 242;
+  --theme-dark: 56 24 16;
+  --theme-muted: 110 90 82;
+  --theme-on-dark: 252 247 242;
+  --theme-on-dark-accent: 242 214 190;
+}
+
+html[data-theme="5"] {
+  --theme-primary: 12 84 94;
+  --theme-surface: 243 203 182;
+  --theme-secondary: 135 169 168;
+  --theme-bg: 246 250 250;
+  --theme-dark: 11 46 51;
+  --theme-muted: 80 107 110;
+  --theme-on-dark: 246 250 250;
+  --theme-on-dark-accent: 243 203 182;
+}
+
+html[data-theme="6"] {
+  --theme-primary: 84 27 70;
+  --theme-surface: 240 216 200;
+  --theme-secondary: 168 149 164;
+  --theme-bg: 251 247 250;
+  --theme-dark: 41 13 34;
+  --theme-muted: 106 86 101;
+  --theme-on-dark: 251 247 250;
+  --theme-on-dark-accent: 240 216 200;
+}
+
+html[data-theme="7"] {
+  --theme-primary: 53 74 33;
+  --theme-surface: 236 212 174;
+  --theme-secondary: 162 166 142;
+  --theme-bg: 249 250 245;
+  --theme-dark: 27 38 17;
+  --theme-muted: 91 99 80;
+  --theme-on-dark: 249 250 245;
+  --theme-on-dark-accent: 236 212 174;
+}
+
+html[data-theme="8"] {
+  --theme-primary: 36 43 110;
+  --theme-surface: 246 219 166;
+  --theme-secondary: 141 148 184;
+  --theme-bg: 248 249 253;
+  --theme-dark: 20 24 64;
+  --theme-muted: 85 91 122;
+  --theme-on-dark: 248 249 253;
+  --theme-on-dark-accent: 246 219 166;
+}
+
+html[data-theme="9"] {
+  --theme-primary: 139 21 43;
+  --theme-surface: 245 216 206;
+  --theme-secondary: 164 152 153;
+  --theme-bg: 252 248 247;
+  --theme-dark: 56 8 18;
+  --theme-muted: 110 88 92;
+  --theme-on-dark: 252 248 247;
+  --theme-on-dark-accent: 245 216 206;
+}
+
+html[data-theme="10"] {
+  --theme-primary: 31 36 40;
+  --theme-surface: 233 201 139;
+  --theme-secondary: 138 146 152;
+  --theme-bg: 250 250 250;
+  --theme-dark: 20 23 26;
+  --theme-muted: 90 96 102;
+  --theme-on-dark: 250 250 250;
+  --theme-on-dark-accent: 233 201 139;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,19 +120,20 @@
 
   body {
     font-family: var(--font-inter), system-ui, sans-serif;
-    background-color: #FAF6F0;
-    color: #2A1616;
+    background-color: rgb(var(--theme-bg));
+    color: rgb(var(--theme-dark));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-cormorant), Georgia, serif;
-    color: #2A1616;
+    color: rgb(var(--theme-dark));
   }
 
   *:focus-visible {
-    outline: 2px solid #590907;
+    outline: 2px solid rgb(var(--theme-primary));
     outline-offset: 2px;
   }
 }

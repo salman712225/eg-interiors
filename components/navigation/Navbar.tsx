@@ -35,8 +35,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#FAF6F0]/98 backdrop-blur-md shadow-md py-2 border-b border-[#E8D2B5]"
-            : "bg-[#FAF6F0]/95 backdrop-blur-md shadow-xs py-3 border-b border-[#E8D2B5]/60"
+            ? "bg-theme-bg/98 backdrop-blur-md shadow-md py-2 border-b border-theme-surface"
+            : "bg-theme-bg/95 backdrop-blur-md shadow-xs py-3 border-b border-theme-surface/60"
         }`}
         role="banner"
       >
@@ -63,10 +63,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-manrope text-sm font-semibold text-[#2A1616] hover:text-[#590907] transition-colors duration-200 relative group py-1 tracking-wide"
+                className="font-manrope text-sm font-semibold text-theme-dark hover:text-theme-primary transition-colors duration-200 relative group py-1 tracking-wide"
               >
                 {link.label}
-                <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-[#590907] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-theme-primary transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </nav>
@@ -75,16 +75,16 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-5">
             <a
               href={`tel:+91${siteConfig.contact.phone1}`}
-              className="flex items-center gap-2 text-xs font-manrope font-semibold text-[#590907] hover:text-[#2A1616] transition-colors"
+              className="flex items-center gap-2 text-xs font-manrope font-semibold text-theme-primary hover:text-theme-dark transition-colors"
             >
-              <Phone size={14} className="text-[#590907]" />
+              <Phone size={14} className="text-theme-primary" />
               <span>{siteConfig.contact.phone1Display}</span>
             </a>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-[#590907] text-[#FAF6F0] font-manrope text-sm font-semibold hover:bg-[#2A1616] transition-colors duration-300 shadow-sm"
+              className="flex items-center gap-2 px-6 py-3 bg-theme-primary text-theme-bg font-manrope text-sm font-semibold hover:bg-theme-dark transition-colors duration-300 shadow-sm"
             >
               Get a Quote
             </a>
@@ -92,7 +92,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 text-[#2A1616] hover:text-[#590907] transition-colors"
+            className="lg:hidden p-2 text-theme-dark hover:text-theme-primary transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
@@ -104,12 +104,12 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-[#FAF6F0] flex flex-col transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed inset-0 z-50 bg-theme-bg flex flex-col transition-transform duration-300 ease-in-out lg:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!menuOpen}
       >
-        <div className="flex items-center justify-between px-6 py-4 border-b border-[#E8D2B5]">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-theme-surface">
           <Image
             src="/logo/Logo-removebg-preview.png"
             alt="E.G. Interiors"
@@ -120,7 +120,7 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
-            className="p-2 text-[#2A1616]"
+            className="p-2 text-theme-dark"
           >
             <X size={28} />
           </button>
@@ -132,27 +132,27 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-cormorant text-2xl font-normal text-[#2A1616] hover:text-[#590907] transition-colors py-3.5 border-b border-[#E8D2B5]/60 flex items-center justify-between"
+              className="font-cormorant text-2xl font-normal text-theme-dark hover:text-theme-primary transition-colors py-3.5 border-b border-theme-surface/60 flex items-center justify-between"
             >
               <span>{link.label}</span>
-              <span className="text-xs font-manrope text-[#A5A79B]">→</span>
+              <span className="text-xs font-manrope text-theme-secondary">→</span>
             </Link>
           ))}
         </nav>
 
-        <div className="px-6 py-6 border-t border-[#E8D2B5] flex flex-col gap-3 bg-[#E8D2B5]/25">
+        <div className="px-6 py-6 border-t border-theme-surface flex flex-col gap-3 bg-theme-surface/25">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full text-center py-3.5 bg-[#590907] text-[#FAF6F0] font-manrope font-semibold text-sm hover:bg-[#2A1616] transition-colors"
+            className="w-full text-center py-3.5 bg-theme-primary text-theme-bg font-manrope font-semibold text-sm hover:bg-theme-dark transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Get a Quote via WhatsApp
           </a>
           <a
             href={`tel:+91${siteConfig.contact.phone1}`}
-            className="w-full flex items-center justify-center gap-2 py-3 border border-[#590907] text-[#590907] font-manrope font-semibold text-sm hover:bg-[#590907] hover:text-[#FAF6F0] transition-colors"
+            className="w-full flex items-center justify-center gap-2 py-3 border border-theme-primary text-theme-primary font-manrope font-semibold text-sm hover:bg-theme-primary hover:text-theme-bg transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             <Phone size={15} />
